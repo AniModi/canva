@@ -4,9 +4,13 @@
     justify-content: center;
     width: 50%;
     height: 100%;
-    background-color: gray;
+    background: url("https://cdn2.vectorstock.com/i/1000x1000/05/61/square-transparent-background-vector-7930561.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .canvas_container__canvas {
-    width: 90%;
+    width: 80%;
+    position: absolute;
 }

@@ -3,10 +3,150 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: green;
   width: 50%;
   height: 100%;
 }
-.action_bar_container__input {
+
+
+.action_bar_container__header {
   width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.action_bar_container__header__title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+
+.action_bar_container__header__subtitle {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.action_bar_container__main_content {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.action_bar_container__main_content__image {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action_bar_container__main_content__text {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.action_bar_container__main_content__text__title {
+  width: 90%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #555;
+}
+
+.action_bar_container__main_content__text__title::before,
+.action_bar_container__main_content__text__title::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #999;
+}
+
+.action_bar_container__main_content__text__title:not(:empty)::before {
+  margin-right: .25em;
+}
+
+.action_bar_container__main_content__text__title:not(:empty)::after {
+  margin-left: .25em;
+}
+
+.action_bar_container__main_content__text__content {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  flex-direction: column;
+}
+
+.input_container label {
+  width: 90%;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+
+.action_bar_container__input {
+  width: 90%;
+  padding: 0.5rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.color_picker_colors {
+  display: flex;
+  gap: 0.5em;
+  width: 90%;
+  margin-top: 1rem;
+}
+
+
+.color_picker {
+  border-radius: 100%;
+  border: 1px solid #999;
+  width: 2rem;
+  height: 2rem;
+}
+
+.color_picker:hover {
+  cursor: pointer;
+}
+
+
+.color_picker_input {
+  border-radius: 100%;
+  border: 1px solid #999;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.color_picker_picker_input_box {
+  position: absolute;
+  opacity: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.color_picker_picker_input_box:hover {
+  cursor: pointer;
 }

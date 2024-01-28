@@ -5,9 +5,9 @@ import useCanvas from "./hooks/useCanvas";
 import { useEffect } from "react";
 
 export default function App() {
-  const { setTemplate } = useCanvas();
+  const { setTemplate, setCaption, setCta } = useCanvas();
   useEffect(() => {
-    setTemplate({
+    const template = {
       caption: {
         text: "1 & 2 BHK Luxury Apartments at just Rs.3.97 Lakhs",
         position: {
@@ -41,8 +41,11 @@ export default function App() {
         design_pattern:
           "https://d273i1jagfl543.cloudfront.net/templates/global_temp_landscape_temp_10_Design_Pattern.png",
       },
-    });
-  }, [setTemplate]);
+    };
+    setCta(template.cta.text);
+    setCaption(template.caption.text);
+    setTemplate(template);
+  }, [setTemplate, setCaption, setCta]);
 
   return (
     <div className="app_container">
